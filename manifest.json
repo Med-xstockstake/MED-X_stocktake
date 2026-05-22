@@ -1,0 +1,18 @@
+{
+  "name": "Med-X Stocktake",
+  "short_name": "MED-X",
+  "description": "Med-X Arndell Park Warehouse Stocktake",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#FFD100",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
