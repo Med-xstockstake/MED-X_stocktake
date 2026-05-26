@@ -943,7 +943,7 @@ function exportCSV(){
   CATS.forEach(c=>c.items.forEach(item=>{
     const t=totals[item.sku];const cnt=t?t.count:0;
     const p=findP(item.sku);
-    rows.push(`${S.date},${S.branch},${S.counter},${item.sku},"${item.desc}",${cnt||''},${p&&p.bq&&cnt?Math.floor(cnt/p.bq):''},${p&&p.bq&&cnt?cnt%p.bq:''},${p&&p.pq&&cnt?(cnt/p.pq).toFixed(2):''},"${t&&t.locations.length?t.locations.join(' '):''}"`)
+   rows.push(`${S.date},${S.branch},${S.counter},${item.sku},"${item.desc}",${cnt || ''},${p && p.bq && cnt ? Math.floor(cnt / p.bq) : ''},${p && p.bq && cnt ? cnt % p.bq : ''},${p && p.pq && cnt ? (cnt / p.pq).toFixed(2) : ''},"${t && t.locations.length ? t.locations.join(' ') : ''}"`);
   }));
   Object.values(totals).filter(t=>!findP(t.sku)).forEach(t=>{
     rows.push(`${S.date},${S.branch},${S.counter},CUSTOM,"${t.desc}",${t.count},,,,"${t.locations.join(' ')}"`)
